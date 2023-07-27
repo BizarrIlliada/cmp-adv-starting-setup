@@ -7,6 +7,11 @@
       :info-text="activeUser.description"
       :role="activeUser.role"
     />
+    <CourseGoals>
+      <template #default="slotProps">
+        <h2>{{ slotProps.goal + slotProps.secondProp }}</h2>
+      </template>
+    </CourseGoals>
   </div>
 </template>
 
@@ -14,12 +19,14 @@
   import TheHeader from './components/TheHeader.vue';
   import UserInfo from './components/UserInfo.vue';
   import BadgeList from './components/BadgeList.vue';
+  import CourseGoals from './components/CourseGoals.vue';
 
   export default {
     components: {
       TheHeader,
       UserInfo,
       BadgeList,
+      CourseGoals,
   },
     data() {
       return {

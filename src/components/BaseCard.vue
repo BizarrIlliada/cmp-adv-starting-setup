@@ -1,7 +1,9 @@
 <template>
   <section>
-    <header>
-      <slot name="header"></slot>
+    <header v-if="$slots.header">
+      <slot name="header">
+        <!-- <h2>The default title</h2> -->
+      </slot>
     </header>
     <slot />
   </section>

@@ -1,6 +1,6 @@
 <template>
   <BaseCard>
-    <template v-slot:header>
+    <template #header>
       <h3>{{ fullName }}</h3>
       <BaseBadge
         :type="role"
