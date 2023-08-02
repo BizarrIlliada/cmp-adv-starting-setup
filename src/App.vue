@@ -41,7 +41,7 @@
       setSelectedComponent(component) {
         this.selectedComponent = component;
       }
-    }
+    },
   };
 </script>
 
