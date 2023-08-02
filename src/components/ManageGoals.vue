@@ -6,11 +6,13 @@
     <button @click="setGoal">
       Set goal
     </button>
-    <ErrorAlert v-if="isDialogVisible">
-      <h2>Input is invalid!</h2>
-      <p>Input can't be empty!</p>
-      <button @click="closeDialog">Close</button>
-    </ErrorAlert>
+    <Teleport to="body">
+      <ErrorAlert v-if="isDialogVisible">
+        <h2>Input is invalid!</h2>
+        <p>Input can't be empty!</p>
+        <button @click="closeDialog">Close</button>
+      </ErrorAlert>
+    </Teleport>
   </div>
 </template>
 
